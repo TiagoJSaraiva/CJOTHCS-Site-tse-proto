@@ -226,7 +226,7 @@
   }
 
   function renderEvent(e) {
-    detailView.innerHTML = `${back}<article class="detail-card"><header class="detail-header"><div><p class="eyebrow">Calendário ${e.ano} · ${escape(e.tema)}</p><h2 id="detail-title" tabindex="-1">${escape(e.titulo)}</h2><p>Data: ${date(e.data)}</p></div></header><div class="detail-body document-body"><p class="notice">Data ilustrativa do protótipo. Não representa orientação ou prazo oficial.</p><dl class="facts">${fact("Data do evento", Q.data(e.data))}${fact("Público", e.publico)}${fact("Tema", e.tema)}</dl><h3>Detalhes</h3><p>${escape(e.descricao)}</p><p class="document-label">Calendário eleitoral ilustrativo de ${e.ano}.</p></div></article>`;
+    detailView.innerHTML = `${back}<article class="detail-card"><header class="detail-header"><div><p class="eyebrow">Calendário ${e.ano} · ${escape(e.tema)}</p><h2 id="detail-title" tabindex="-1">${escape(e.titulo)}</h2><p>Data: ${date(e.data)}</p></div></header><div class="detail-body document-body"><dl class="facts">${fact("Data do evento", Q.data(e.data))}${fact("Público", e.publico)}${fact("Tema", e.tema)}</dl><h3>Detalhes</h3><p>${escape(e.descricao)}</p></div></article>`;
   }
 
   function route(shouldFocus = false) {

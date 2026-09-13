@@ -11,7 +11,7 @@
   document.getElementById("site-header").innerHTML = `
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
     <header id="topo">
-      <div class="utility"><div class="container"><span>Protótipo acadêmico · Dados fictícios · Sem vínculo oficial</span><a href="#conteudo">Ir para o conteúdo</a></div></div>
+      <div class="utility"><div class="container"><a href="#conteudo"></a></div></div>
       <div class="container brand-row">
         <a class="brand" href="index.html" aria-label="TSE, protótipo acadêmico — início"><span class="brand-mark">TSE</span><span class="brand-name">Tribunal Superior<br>Eleitoral</span></a>
         <div class="brand-note"><strong>Justiça Eleitoral</strong>Informação e transparência</div>
@@ -21,8 +21,8 @@
     </header>`;
   document.getElementById("site-footer").innerHTML = `
     <footer class="site-footer"><div class="container">
-      <div class="footer-top"><div><strong>Tribunal Superior Eleitoral</strong><p>Protótipo acadêmico inspirado no portal do TSE. Todos os registros, valores, normas e datas apresentados são ilustrativos.</p></div><a href="#topo">Voltar ao topo ↑</a></div>
-      <div class="footer-bottom"><span>Sem vínculo oficial com a Justiça Eleitoral.</span><span>Consultas locais · Nenhum dado é enviado</span></div>
+      <div class="footer-top"><div><strong>Tribunal Superior Eleitoral</strong><p>Representação acadêmica do portal do TSE. Todos os registros, valores, normas e datas apresentados são ilustrativos.</p></div><a href="#topo">Voltar ao topo ↑</a></div>
+      <div class="footer-bottom"></div>
     </div></footer>`;
   const botao = document.querySelector(".menu-toggle");
   const menu = document.getElementById("nav-links");

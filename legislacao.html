@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Pesquisa de resoluções e portarias ilustrativas por assunto, tipo e ano.">
-  <title>Legislação compilada | TSE — Protótipo acadêmico</title>
+  <title>Legislação compilada | TSE</title>
   <link rel="stylesheet" href="assets/estilos.css">
   <script src="assets/dados.js" defer></script>
   <script src="assets/consultas.js" defer></script>
@@ -25,7 +25,7 @@
           <div class="field"><label for="tipo">Tipo de norma</label><select id="tipo" name="tipo"><option value="">Todos os tipos</option><option>Resolução</option><option>Portaria</option></select></div>
           <div class="field"><label for="ano">Ano de publicação</label><select id="ano" name="ano"><option value="">Todos os anos</option><option>2026</option><option>2025</option><option>2024</option></select></div>
         </div>
-        <div class="form-actions"><button class="button" type="submit">Pesquisar</button><button class="button button-secondary" type="reset">Limpar filtros</button><p class="form-help">Textos ilustrativos, sem validade jurídica.</p></div>
+        <div class="form-actions"><button class="button" type="submit">Pesquisar</button><button class="button button-secondary" type="reset">Limpar filtros</button></div>
       </form>
       <div class="results-bar"><h2 id="result-count" role="status" aria-live="polite"></h2><div class="sort-field"><label for="ordem">Ordenar por</label><select id="ordem"><option value="antigas">Mais antigas primeiro</option><option value="recentes">Mais recentes primeiro</option></select></div></div>
       <div id="results" class="record-list"></div>
