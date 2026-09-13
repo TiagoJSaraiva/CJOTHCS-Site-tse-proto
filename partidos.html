@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta de partidos e direções nacionais com dados fictícios para avaliação acadêmica.">
+  <title>Partidos registrados | TSE — Protótipo acadêmico</title>
+  <link rel="stylesheet" href="assets/estilos.css">
+  <script src="assets/dados.js" defer></script>
+  <script src="assets/consultas.js" defer></script>
+  <script src="assets/comum.js" defer></script>
+  <script src="assets/paginas.js" defer></script>
+</head>
+<body data-page="partidos">
+  <div id="site-header"></div>
+  <main id="conteudo" class="container" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Partidos registrados</span></nav>
+    <header class="page-heading"><p class="eyebrow">Organização partidária</p><h1>Partidos registrados</h1><p>Conheça os partidos políticos e consulte seus dados de registro e sua direção nacional.</p></header>
+    <p id="route-notice" class="notice" role="status" hidden></p>
+    <section id="list-view" aria-label="Consulta de partidos">
+      <form id="filters" class="filter-panel">
+        <h2>Pesquisar partidos</h2>
+        <div class="field"><label for="busca">Nome ou sigla do partido</label><input type="search" id="busca" name="busca" placeholder="Digite o nome ou a sigla" maxlength="100"></div>
+        <div class="form-actions"><button class="button" type="submit">Pesquisar</button><button class="button button-secondary" type="reset">Limpar filtros</button></div>
+      </form>
+      <div class="results-bar"><h2 id="result-count" role="status" aria-live="polite"></h2><p>Selecione um partido para ver seus dados.</p></div>
+      <div id="results"></div>
+    </section>
+    <section id="detail-view" aria-label="Ficha do partido" hidden></section>
+    <noscript><p class="notice">Ative o JavaScript para pesquisar partidos. Protótipo acadêmico com dados fictícios. <a href="index.html">Voltar ao início</a>.</p></noscript>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>

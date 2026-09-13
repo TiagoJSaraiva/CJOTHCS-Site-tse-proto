@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta fictícia de candidaturas, bens e contas eleitorais para avaliação acadêmica.">
+  <title>Candidaturas e contas | TSE — Protótipo acadêmico</title>
+  <link rel="stylesheet" href="assets/estilos.css">
+  <script src="assets/dados.js" defer></script>
+  <script src="assets/consultas.js" defer></script>
+  <script src="assets/comum.js" defer></script>
+  <script src="assets/paginas.js" defer></script>
+</head>
+<body data-page="candidaturas">
+  <div id="site-header"></div>
+  <main id="conteudo" class="container" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Você está em"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Candidaturas e contas</span></nav>
+    <header class="page-heading"><p class="eyebrow">Transparência eleitoral</p><h1>Candidaturas e contas eleitorais</h1><p>Consulte informações de candidaturas, bens declarados e receitas e despesas de campanha.</p></header>
+    <p id="route-notice" class="notice" role="status" hidden></p>
+    <section id="list-view" aria-label="Consulta de candidaturas">
+      <form id="filters" class="filter-panel">
+        <h2>Pesquisar candidaturas</h2>
+        <div class="fields">
+          <div class="field"><label for="ano">Eleição</label><select name="ano" id="ano"><option value="">Todas as eleições</option><option value="2026">Eleições 2026</option><option value="2022">Eleições 2022</option></select></div>
+          <div class="field"><label for="uf">Estado (UF)</label><select name="uf" id="uf"><option value="">Todos os estados</option><option value="MG">Minas Gerais — MG</option><option value="RJ">Rio de Janeiro — RJ</option><option value="SP">São Paulo — SP</option></select></div>
+          <div class="field"><label for="cargo">Cargo</label><select name="cargo" id="cargo"><option value="">Todos os cargos</option><option>Deputado estadual</option><option>Deputado federal</option></select></div>
+          <div class="field"><label for="nome">Nome da candidatura</label><input type="search" id="nome" name="nome" placeholder="Digite o nome" maxlength="100"></div>
+        </div>
+        <div class="form-actions"><button class="button" type="submit">Pesquisar</button><button class="button button-secondary" type="reset">Limpar filtros</button><p class="form-help">Todos os filtros são opcionais.</p></div>
+      </form>
+      <div class="results-bar"><h2 id="result-count" role="status" aria-live="polite"></h2><p>Selecione um nome para consultar a ficha.</p></div>
+      <div id="results"></div>
+    </section>
+    <section id="detail-view" aria-label="Ficha da candidatura" hidden></section>
+    <noscript><p class="notice">Ative o JavaScript para pesquisar candidaturas. Protótipo acadêmico com dados fictícios. <a href="index.html">Voltar ao início</a>.</p></noscript>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>
