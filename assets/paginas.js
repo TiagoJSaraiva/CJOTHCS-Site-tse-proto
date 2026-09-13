@@ -222,7 +222,7 @@
   }
 
   function renderLaw(n) {
-    detailView.innerHTML = `${back}<article class="detail-card"><header class="detail-header"><div><p class="eyebrow">${escape(n.assunto)}</p><h2 id="detail-title" tabindex="-1">${n.tipo} nº ${n.numero}</h2><p>Publicação: ${date(n.data)}</p></div></header><div class="detail-body document-body"><p class="notice">Norma fictícia para avaliação acadêmica. Este texto não tem validade jurídica.</p><h3>Ementa</h3><p>${escape(n.ementa)}</p><hr class="section-divider"><h3>Texto da norma</h3>${n.texto.map((p) => `<p>${escape(p)}</p>`).join("")}<p class="document-label">Fim do texto ilustrativo · ${n.tipo} nº ${n.numero}</p></div></article>`;
+    detailView.innerHTML = `${back}<article class="detail-card"><header class="detail-header"><div><p class="eyebrow">${escape(n.assunto)}</p><h2 id="detail-title" tabindex="-1">${n.tipo} nº ${n.numero}</h2><p>Publicação: ${date(n.data)}</p></div></header><div class="detail-body document-body"><h3>Ementa</h3><p>${escape(n.ementa)}</p><hr class="section-divider"><h3>Texto da norma</h3>${n.texto.map((p) => `<p>${escape(p)}</p>`).join("")}<p class="document-label"> · ${n.tipo} nº ${n.numero}</p></div></article>`;
   }
 
   function renderEvent(e) {
