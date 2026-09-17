@@ -275,24 +275,24 @@
       );
   }
 
-  function applyFilters(shouldFocus = false) {
+  function applyFilters() {
     applied = Object.fromEntries(new FormData(form));
     notice.hidden = true;
     renderResults();
-    if (shouldFocus) focus(count);
   }
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    applyFilters(true);
   });
+  form.addEventListener("input", applyFilters);
+  form.addEventListener("change", applyFilters);
   form.addEventListener("reset", () => {
     // O navegador restaura os campos após disparar o evento reset.
     setTimeout(() => {
       if (order) order.value = "antigas";
-      applyFilters(true);
+      applyFilters();
     }, 0);
   });
-  if (order) order.addEventListener("change", renderResults);
+  if (order) order.addEventListener("change", applyFilters);
   window.addEventListener("hashchange", () => route(true));
   applyFilters();
   route();
